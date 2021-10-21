@@ -1,0 +1,47 @@
+{
+    "html":{
+       "style":{
+          "position":"absolute",
+          "left":"2.5vw",
+          "top":"6vh",
+          "border":"0.25vh solid #73AD21",
+          "width":"30vw",
+          "height":"50vh"
+       },
+       "placeholder":"ASSUME YOU ARE WRITING IN BODY DIRECTLY",
+       "mode":"html",
+       "theme":"monokai",
+       "fontSize":"1.2vw",
+       "tabSize":"2"
+    },
+    "css":{
+       "style":{
+          "position":"absolute",
+          "top":"6vh",
+          "left":"34.5vw",
+          "border":"0.25vh solid #73AD21",
+          "width":"30vw",
+          "height":"50vh"
+       },
+       "placeholder":"ASSUME YOU ARE WRITING IN STYLE DIRECTLY",
+       "mode":"css",
+       "theme":"solarized_dark",
+       "fontSize":"1.2vw",
+       "tabSize":"2"
+    },
+    "js":{
+       "style":{
+          "position":"absolute",
+          "left":"66.5vw",
+          "top":"6vh",
+          "border":"0.25vh solid #73AD21",
+          "width":"30vw",
+          "height":"50vh"
+       },
+       "placeholder":"ASSUME YOU ARE WRITING IN SCRIPT DIRECTLY",
+       "mode":"javascript",
+       "theme":"terminal",
+       "fontSize":"1.2vw",
+       "tabSize":"2"
+    }
+ }

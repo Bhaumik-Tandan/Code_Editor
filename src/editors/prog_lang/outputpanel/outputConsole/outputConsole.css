@@ -1,0 +1,10 @@
+.outputConsole{
+    border: solid #0037DA;
+    border-width: 0.5vw;
+    position: absolute;
+    top: 32%;
+    width: 99.25%;
+    height:65%;
+    background-color: #0037DA;
+    color: aliceblue;
+}
