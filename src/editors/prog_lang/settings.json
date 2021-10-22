@@ -19,7 +19,7 @@
 
     "c":{
         "api_lang":"c",
-        "boiler_code":"#include<stdio.h>\nmain()\n{\n  printf(\"Hello World\");\n}",
+        "boiler_code":"#include<stdio.h>\nint main()\n{\n  printf(\"Hello World\");\n}",
         "mode":"c_cpp"
     },
 

@@ -4,6 +4,6 @@ export function restCon(payload,method,route)
     return fetch(route, {
          method: method,
          body: payload,
-         headers:{"Content-Type":"application/json"}
+         headers:{"Content-Type":"application/json",'Accept': 'application/json'}
         });
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./outputpanel.css";
 import OutputConsole from './outputConsole/outputConsole';
-function OutputPanel(props) {
+function OutputPanel() {
     return (
         <div className="output">
             <center><h1>OUTPUT</h1></center>
