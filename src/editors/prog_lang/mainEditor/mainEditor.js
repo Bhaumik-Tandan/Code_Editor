@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useCodeSet } from '../codeHook/codeHook';
 import TextEditor from "../../textEditor/textEditor";
 
@@ -14,6 +14,11 @@ const styleEditor={
 function MainEditor(props) {
     const setCode=useCodeSet();
     const settings=require("../settings.json");
+
+    useEffect(() => {
+        setCode(localStorage[props.lang]);
+    },[props.lang]);    
+
     return (
         <TextEditor settings={{"style":styleEditor,"theme":"twilight",
             "mode":settings[props.lang]["mode"],"fontSize":"1.5vw","tabSize":"2"}} 

@@ -20,7 +20,7 @@ export function useCodeSet() {
 function CodeHook({children}){
 
     const lang=useLanguage();
-    const [code, setCode] = useState(localStorage[lang]);;
+    const [code, setCode] = useState();;
 
     function changeCode(setVal)
     {
