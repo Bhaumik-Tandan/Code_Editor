@@ -8,12 +8,15 @@ import {useCode} from "../../../codeHook/codeHook";
 
 function OutputConsole(props) {
     const lang=useLanguage();
-    const getLocalStorage=()=>localStorage[lang+"Output"]?localStorage[lang+"Output"]:"Run code to see output here....";
-    const [output,setOutput]=useState(getLocalStorage());
+    const [output,setOutput]=useState("Run code to see output here....");
     const loading=useLoading();
     const setLoading=useLoadingSet();
     const api_lang=require("../../../settings.json")[lang]["api_lang"];
     const code=useCode();
+
+    useEffect(() => {
+        setOutput("Run code to see output here....");
+    }, [lang])
 
     useEffect(() => {
 
