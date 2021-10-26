@@ -1,5 +1,6 @@
 import React from 'react';
-import "./outputpanel.css";
+import "./outputPanel.css";
+
 import OutputConsole from './outputConsole/outputConsole';
 function OutputPanel() {
     return (

@@ -1,10 +1,11 @@
 import React,{useState,useEffect} from 'react';
-import "./outputConsole.css";
 import {useLanguage} from "../../../../../language/languageHook";
 import {useLoading,useLoadingSet} from "./loading/loadingHook/loadingHook";
 import Loading from "./loading/loading";
 import {restCon} from "../../../../../restCon";
 import {useCode} from "../../../codeHook/codeHook";
+import AceEditor from 'react-ace';
+import 'ace-builds/src-noconflict/theme-terminal'
 
 function OutputConsole(props) {
     const lang=useLanguage();
@@ -40,7 +41,15 @@ function OutputConsole(props) {
 
     return (
         <div className="outputConsole">
-           {loading?<Loading/>:output}
+           {loading?<Loading/>:
+           <AceEditor 
+           value={output} 
+           theme="terminal"
+           fontSize="1.2vw" 
+           tabSize="2" 
+           style={{"position": "absolute", "width":"95vw","height":"20vh"}}
+           showGutter={false} 
+           highlightActiveLine={false}/>}
         </div>
     )
 }

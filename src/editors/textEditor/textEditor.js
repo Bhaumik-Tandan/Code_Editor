@@ -36,7 +36,7 @@ function TextEditor(props) {
               enableLiveAutocompletion: true,
               enableSnippets: true,
               showLineNumbers: true,
-              tabSize: props.settings.tabSize,
+              tabSize: props.settings.tabSize
             }} />
     )
 }
