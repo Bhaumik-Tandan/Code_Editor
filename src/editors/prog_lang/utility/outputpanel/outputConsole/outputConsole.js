@@ -6,13 +6,15 @@ import {restCon} from "../../../../../restCon";
 import {useCode} from "../../../codeHook/codeHook";
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/theme-terminal'
+const settings=require("../../../settings.json");
 
 function OutputConsole(props) {
     const lang=useLanguage();
     const [output,setOutput]=useState("Run code to see output here....");
     const loading=useLoading();
     const setLoading=useLoadingSet();
-    const api_lang=require("../../../settings.json")[lang]["api_lang"];
+    const api_lang=settings[lang]["api_lang"];
+    const api_url=settings[lang]["api_url"];
     const code=useCode();
 
     useEffect(() => {
@@ -20,12 +22,11 @@ function OutputConsole(props) {
     }, [lang])
 
     useEffect(() => {
-
         async function runCode() 
         {
             if(!loading)
             return;
-            const res= await restCon({"code": code,"lang": api_lang},"POST",REACT_CODE_COMPILE_API);
+            const res= await restCon({"code": code,"lang": api_lang},"POST",api_url);
             const  response=await res.json();
             const error=response.error;
             const output=response.output;
