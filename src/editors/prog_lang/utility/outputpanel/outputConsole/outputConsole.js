@@ -25,7 +25,7 @@ function OutputConsole(props) {
         {
             if(!loading)
             return;
-            const res= await restCon({"code": code,"lang": api_lang},"POST","http://localhost:8080");
+            const res= await restCon({"code": code,"lang": api_lang},"POST",REACT_CODE_COMPILE_API);
             const  response=await res.json();
             const error=response.error;
             const output=response.output;
