@@ -12,10 +12,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/:id">
+      <Route path="/Code_Editor/:id">
           <SiteHost />
-        </Route>
-        <Route path="*">
+      </Route>
+      <Route path="/Code_Editor">
           <Edit />
         </Route>
       </Switch>
