@@ -12,7 +12,7 @@ function Web() {
 
     return (
         <div>
-            <ShareButton/>
+            <ShareButton code={{html:html,css:css,js:js}}/>
             <TextEditor settings={{...settings["html"]}} localStorageName={"html"} setFun={setHTML}/>
             <TextEditor settings={{...settings["css"]}} localStorageName={"css"} setFun={setCSS}/>
             <TextEditor settings={{...settings["js"]}} localStorageName={"js"} setFun={setJS}/>

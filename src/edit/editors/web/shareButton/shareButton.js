@@ -1,8 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react';
+import Box from './box/box';
+function ShareButton(props) {
 
-function ShareButton() {
+    const [isShared, setIsShared] = useState(false);
+
+    const share = () => {
+        setIsShared(p=>!p);
+    }
+
+
     return (
-        <center><button>Share</button></center>
+        <>
+        <center>
+            <button onClick={share}>Share</button>
+        </center>
+        {isShared?<Box show={isShared} code={props.code} handleClose={share}/>:null}
+        </>
+        
     )
 }
 
