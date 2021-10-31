@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import TextEditor from '../textEditor/textEditor';
+import ShareButton from './shareButton/shareButton';
 const settings=require("./settings.json");
 const docTemplate=(html,css,js)=>`<html><body>${html}</body><style>${css}</style><script>${js}</script></html>`;
 const empty=(v)=>v?v:"";
@@ -11,6 +12,7 @@ function Web() {
 
     return (
         <div>
+            <ShareButton/>
             <TextEditor settings={{...settings["html"]}} localStorageName={"html"} setFun={setHTML}/>
             <TextEditor settings={{...settings["css"]}} localStorageName={"css"} setFun={setCSS}/>
             <TextEditor settings={{...settings["js"]}} localStorageName={"js"} setFun={setJS}/>

@@ -50,7 +50,9 @@ function OutputConsole(props) {
            tabSize="2" 
            style={{"position": "absolute", "width":"95vw","height":"20vh"}}
            showGutter={false} 
-           highlightActiveLine={false}/>}
+           highlightActiveLine={false}
+           readOnly={true}
+           />}
         </div>
     )
 }

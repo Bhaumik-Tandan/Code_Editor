@@ -1,12 +1,25 @@
-import Language from "./language/language";
-import LanguageHook from "./language/languageHook";
-import Editors from "./editors/editors";
+import Edit from "./edit/edit";
+import React from "react";
+import SiteHost from "./siteHost/siteHost";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+
 function App() {
   return (
-      <LanguageHook className="App">
-        <Language/>
-        <Editors/>
-      </LanguageHook>
+    <Router>
+      <Switch>
+        <Route path="/:id">
+          <SiteHost />
+        </Route>
+        <Route path="*">
+          <Edit />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
